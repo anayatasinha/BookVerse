@@ -4,15 +4,30 @@ from pathlib import Path
 
 BASE_URL = "https://openlibrary.org/search.json"
 
+FIELDS = [
+    "key",
+    "title",
+    "author_key",
+    "author_name",
+    "first_publish_year",
+    "language",
+    "edition_count",
+    "cover_i",
+    "cover_edition_key",
+    "ebook_access",
+    "has_fulltext"
+]
+
 def fetch_books(query="fantasy",limit = 20):
 
     params = {
         "q":query,
-        "limit":limit
+        "limit":limit,
+        "fields":",".join(FIELDS)
     }
 
     headers = {
-        "user-Agent" : "BookVerse/0.1 (development project)"
+        "user-Agent" : "BookVerse/0.1"
     }
 
     response = requests.get(
@@ -42,7 +57,7 @@ def save_raw_data(data, filename="openlibrary_fantasy.json"):
 
 if __name__ == "__main__":
 
-    data = fetch_books("fantasy", 20)
+    data = fetch_books("fantasy", limit=20)
     save_raw_data(data)
 
     print(f"Books fetched: {len(data.get('docs',[]))}")

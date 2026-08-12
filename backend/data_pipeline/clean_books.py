@@ -7,7 +7,7 @@ RAW_FILE = Path(
 )
 
 OUTPUT_FILE = Path(
-    "data/processed/openlibrary_fantasy_cleaned.csv"
+    "data/processed/openlibrary_fantasy_cleaned.parquet"
 )
 
 def load_data():
@@ -20,43 +20,47 @@ def load_data():
 
     return data["docs"]
 
-def create_dataframe(books):
+# def create_dataframe(books):
 
-    """Convert book records into pandas dataframe."""
+#     """Convert book records into pandas dataframe."""
 
-    df = pd.DataFrame(books)
+#     df = pd.DataFrame(books)
 
-    return df
+#     return df
 
-def clean_data(df):
+def clean_data(books):
 
     """Clean and select required book fileds."""
 
-    #Keep only columns that currently exist
-    required_columns = [
-        "title",
-        "author_name",
-        "first_publish_year",
-        "subject",
-        "language",
-        "isbn"
-    ]
+    df = pd.DataFrame(books)
 
-    existing_columns = [
-        column for column in required_columns
-        if column in df.columns 
-    ]
+    # #Keep only columns that currently exist
+    # required_columns = [
+    #     "title",
+    #     "author_name",
+    #     "first_publish_year",
+    #     "subject",
+    #     "language",
+    #     "isbn"
+    # ]
 
-    df = df[existing_columns].copy()
+    # existing_columns = [
+    #     column for column in required_columns
+    #     if column in df.columns 
+    # ]
+
+    # df = df[existing_columns].copy()
 
     #Rename columns
 
     df.rename(
         columns = {
+            "key": "work_id",
+            "author_key": "author_ids",
             "author-name":"authors",
             "first_publish_year":"publication_year",
-            "subject":"subjects",
-            "language":"languages"
+            "language":"languages",
+            "cover_i": "cover_id"
         },
         inplace = True
     )
@@ -73,12 +77,9 @@ def clean_data(df):
         df["title"].astype(str).str.strip()
     )
 
-    #Remove duplicate title or this initial experimet
+    #Remove duplicate 
 
-    df.drop_duplicates(
-        subset=["title"],
-        inplace = True
-    )
+    # df.drop_duplicates(inplace=True)
 
     #Reset index
     df.reset_index(drop=True, inplace= True)
@@ -93,7 +94,7 @@ def save_data(df):
         exist_ok=True
     )
 
-    df.to_csv(
+    df.to_parquet(
         OUTPUT_FILE,
         index = False
     )
@@ -105,24 +106,16 @@ if __name__ == "__main__":
 
     books = load_data()
 
-    print(f"Raw books : {len(books)}")
+    df = clean_data(books)
 
-    df = create_dataframe(books)
-
-    print(f"Initial DataFrame shape {df.shape}")
-
-    df = clean_data(df)
-
-    print(f"Cleaned Dataframe shape : {df.shape}")
+    print("\nShape:")
+    print(df.shape)
 
     print("\nColumns:")
-    print(df.columns.tolist())
+    print(df.columns.tolist)
 
-    print("\nFirst 5 books:")
-    print(df.head())
-
-    print("\nMissing values:")
-    print(df.isnull().sum())
+    print("\nFirst record:")
+    print(df.iloc[0])
 
     save_data(df)
     

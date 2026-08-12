@@ -1,21 +1,21 @@
-title,author_name,publication_year,languages
-Fantasy Girl,['Carole Mortimer'],1983,"['eng', 'und']"
-Her Christmas Fantasy,['Penny Jordan'],1996,['eng']
-My Secret Garden,['Nancy Friday'],1973,"['fre', 'dut', 'hrv', 'eng', 'chi']"
-Fantasy,['Emma Darcy'],1985,['eng']
-Fantasy in death,"['Nora Roberts', 'Susan Ericksen']",2010,"['fre', 'eng']"
-Powerless,['Lauren Roberts'],2023,"['eng', 'por', 'spa']"
-The Kingdom of Fantasy,"['Elisabetta Dami', 'David Nel·lo', 'Larry Keys', 'Titi Plumederat', 'Koldo Biguri']",2005,"['eng', 'spa', 'dut', 'fre']"
-Forbidden Flowers,['Nancy Friday'],1975,['eng']
-Fantasy Lover,['Sherrilyn Kenyon'],2002,['eng']
-Lilith,['George MacDonald'],1895,"['ger', 'eng', 'fre', 'ita']"
-Men in Love: Men's Sexual Fantasies,['Nancy Friday'],1980,"['fre', 'und', 'eng']"
-Fantasy for Two,['Penny Jordan'],1998,['eng']
-Fantasy encyclopedia,"['Judy Allen', 'Richard Hook', 'Jonathan Stroud', 'John Howe']",2005,['eng']
-The ghost,['Arnold Bennett'],1907,['eng']
-Restoree,['Anne McCaffrey'],1967,"['eng', 'ger', 'fre']"
-Belladonna,['Adalyn Grace'],2022,"['ger', 'eng']"
-Dragonsong,['Anne McCaffrey'],1976,"['eng', 'fre', 'por']"
-Phantasma,['Kaylie Smith'],2024,"['eng', 'ita', 'dut']"
-Castle Roogna,['Piers Anthony'],1979,['eng']
-Flight to fantasy,['Margaret Malcolm'],1976,['eng']
+author_ids,author_name,cover_edition_key,cover_id,ebook_access,edition_count,publication_year,has_fulltext,work_id,languages,title
+['OL666139A'],['Carole Mortimer'],OL10738221M,8337298,printdisabled,6,1983,True,/works/OL3775422W,"['eng', 'und']",Fantasy Girl
+['OL661093A'],['Penny Jordan'],OL10739155M,6611725,borrowable,4,1996,True,/works/OL3759099W,['eng'],Her Christmas Fantasy
+['OL59362A'],['Nancy Friday'],OL11758368M,2787375,borrowable,32,1973,True,/works/OL733144W,"['fre', 'dut', 'hrv', 'eng', 'chi']",My Secret Garden
+['OL451969A'],['Emma Darcy'],OL10738383M,5073358,borrowable,1,1985,True,/works/OL2959228W,['eng'],Fantasy
+"['OL18977A', 'OL7301162A']","['Nora Roberts', 'Susan Ericksen']",,6305245,printdisabled,20,2010,True,/works/OL14873636W,"['fre', 'eng']",Fantasy in death
+['OL11086929A'],['Lauren Roberts'],OL48316907M,14567864,no_ebook,13,2023,False,/works/OL34774028W,"['eng', 'por', 'spa']",Powerless
+"['OL2703408A', 'OL7938741A', 'OL4064584A', 'OL8291588A', 'OL12550975A']","['Elisabetta Dami', 'David Nel·lo', 'Larry Keys', 'Titi Plumederat', 'Koldo Biguri']",,14416105,borrowable,16,2005,True,/works/OL15493152W,"['eng', 'spa', 'dut', 'fre']",The Kingdom of Fantasy
+['OL59362A'],['Nancy Friday'],OL11069633M,5094158,printdisabled,24,1975,True,/works/OL733159W,['eng'],Forbidden Flowers
+['OL589683A'],['Sherrilyn Kenyon'],OL3282354M,185094,printdisabled,3,2002,True,/works/OL3522021W,['eng'],Fantasy Lover
+['OL23082A'],['George MacDonald'],OL26320183M,14364546,public,480,1895,True,/works/OL15437W,"['ger', 'eng', 'fre', 'ita']",Lilith
+['OL59362A'],['Nancy Friday'],OL7517890M,280237,borrowable,25,1980,True,/works/OL733143W,"['fre', 'und', 'eng']",Men in Love: Men's Sexual Fantasies
+['OL661093A'],['Penny Jordan'],OL10241043M,5046391,printdisabled,8,1998,True,/works/OL3759071W,['eng'],Fantasy for Two
+"['OL341438A', 'OL2829436A', 'OL29219A', 'OL1755865A']","['Judy Allen', 'Richard Hook', 'Jonathan Stroud', 'John Howe']",OL23274779M,6498640,borrowable,3,2005,True,/works/OL2457494W,['eng'],Fantasy encyclopedia
+['OL29586A'],['Arnold Bennett'],OL6986650M,5877895,public,319,1907,True,/works/OL109229W,['eng'],The ghost
+['OL19880A'],['Anne McCaffrey'],OL9330036M,207540,printdisabled,21,1967,True,/works/OL73383W,"['eng', 'ger', 'fre']",Restoree
+['OL7823810A'],['Adalyn Grace'],OL36023220M,12905843,no_ebook,9,2022,False,/works/OL26602235W,"['ger', 'eng']",Belladonna
+['OL19880A'],['Anne McCaffrey'],OL27289770M,8769648,borrowable,39,1976,True,/works/OL73385W,"['eng', 'fre', 'por']",Dragonsong
+['OL10467258A'],['Kaylie Smith'],OL51104480M,14842920,no_ebook,5,2024,False,/works/OL37862524W,"['eng', 'ita', 'dut']",Phantasma
+['OL19905A'],['Piers Anthony'],OL10683297M,2404630,printdisabled,16,1979,True,/works/OL80865W,['eng'],Castle Roogna
+['OL1344858A'],['Margaret Malcolm'],OL10690892M,8326012,borrowable,1,1976,True,/works/OL18160399W,['eng'],Flight to fantasy
